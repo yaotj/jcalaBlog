@@ -44,11 +44,13 @@
                         <br>
                         <form id="tab2" name="newPassForm">
                             <label class="text-warning">old password</label>
-                            <input type="password" class="form-control" name="old_pass" id="old_pass">
+                            <input type="password" class="form-control" name="old_pass_bef" id="old_pass_bef">
                             <label class="text-warning">new password</label>
-                            <input type="password" class="form-control" name="new_pass" id="new_pass_one">
+                            <input type="password" class="form-control" name="new_pass_one" id="new_pass_one">
                             <label class="text-warning">repeat new password</label>
-                            <input type="password" class="form-control" id="new_pass_two">
+                            <input type="password" class="form-control" name="new_pass_two" id="new_pass_two">
+                            <input type="hidden" name="old_pass" id="old_pass">
+                            <input type="hidden" name="new_pass" id="new_pass">
                             <div>
                                 <button class="btn btn-primary" id="update_pass">Update</button>
                             </div>

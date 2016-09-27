@@ -25,9 +25,10 @@
                     <div class="input-group-addon">
                         <i class="fa fa-key"></i>
                     </div>
-                    <input type="password" class="form-control" name="password" id="password" placeholder="Password" autocomplete="off" />
+                    <input type="password" class="form-control" name="passBefore" id="passBefore" placeholder="Password" autocomplete="off" />
                 </div>
             </div>
+            <input type="hidden" name="password" id="password"/>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-block btn-login" id="login-admin">
                     <i class="fa fa-sign-in"></i>
