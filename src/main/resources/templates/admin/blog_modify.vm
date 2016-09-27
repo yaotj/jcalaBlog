@@ -1,6 +1,6 @@
 #include("/templates/module/admin/header.vm")
 <link href="/css/editormd.min.css" rel="stylesheet"/>
-<link href="/css/bootstrap-tagsinput.css" rel="stylesheet">
+<link href="/css/bootstrap-tagsinput.min.css" rel="stylesheet">
 #include("/templates/module/admin/nav.vm")
     <div id="page-wrapper">
         <div class="row">
