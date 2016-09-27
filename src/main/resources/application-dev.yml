@@ -42,18 +42,14 @@ spring:
       password: root
       url: jdbc:mysql://127.0.0.1:3306/jcala_blog?useUnicode:true&amp;characterEncoding:UTF-8
       driverClassName: com.mysql.jdbc.Driver
+      schema: classpath:import.sql
+      data: classpath:data.sql
+      initialize: true
       hikari:
         connection-timeout: 30000
         maximum-pool-size: 50
         minimum-idle: 5
-      schema: import.sql
-      data: data.sql
 mybatis:
     type-aliases-package: me.jcala.blog.domain,me.jcala.blog.mapping
     type-handlers-package: org.apache.ibatis.type.LocalDateTypeHandler
     config-location: classpath:mybatis-config.xml
-reverse:
-    domain: http://127.0.0.1
-    port: 8090
-    prefix: jcala_blog
-    path: /home/jcala/blog
