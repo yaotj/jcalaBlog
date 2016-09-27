@@ -5,9 +5,6 @@ $(function() {
         height  : 900,
         syncScrolling : "single",
         path    : "../lib/",
-        imageUpload : true,
-        imageFormats : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
-        imageUploadURL : "/admin/file/uplPic.action",
         saveHTMLToTextarea : true
     });
     function themeSelect(id, themes, lsKey, callback)

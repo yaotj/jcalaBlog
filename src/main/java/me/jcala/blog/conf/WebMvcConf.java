@@ -13,11 +13,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 public class WebMvcConf extends WebMvcConfigurerAdapter{
     @Autowired
     private UserSecurityInterceptor securityInterceptor;
-    //@Autowired
-    //private IpInterceptor ipInterceptor;
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-       // registry.addInterceptor(ipInterceptor).addPathPatterns("/*");
         registry.addInterceptor(securityInterceptor).addPathPatterns("/admin/**");
     }
 
