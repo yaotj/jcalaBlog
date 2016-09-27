@@ -62,7 +62,6 @@ public class FontEndCtrl {
     }
     @GetMapping("/about")
     public String about(Model model) {
-        model.addAttribute("info",infoSer.getInfo());
         model.addAttribute("resume",infoSer.getResumeView());
         return "about";
     }
@@ -84,7 +83,6 @@ public class FontEndCtrl {
     }
     @GetMapping("/login")
     public String login(HttpServletRequest request, Model model) {
-        model.addAttribute("avatar", infoSer.getInfo().getAvatar());
         String result = request.getParameter("result");
         if (result != null && result.equals("fail")) {
             model.addAttribute("success", 0);
