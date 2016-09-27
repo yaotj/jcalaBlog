@@ -17,7 +17,7 @@
             localStorage.blog_theme="light";
         }
         if(localStorage.blog_theme=="dark"){
-            css.href="/css/landing-page-dark.css";
+            css.href="/css/landing-page-dark.min.css";
         }
     }
     switch_theme_css();

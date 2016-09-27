@@ -23,7 +23,7 @@ function day_night() {
     if (btn.className=="fa fa-sun-o"){
         btn.className="fa fa-moon-o";
         themeFont.textContent="NIGHT";
-        css.href="/css/landing-page.css";
+        css.href="/css/landing-page.min.css";
         if(md!=null){
             md.className="editormd-preview";
         }
@@ -31,7 +31,7 @@ function day_night() {
     }else {
         btn.className="fa fa-sun-o";
         themeFont.textContent="DAY";
-        css.href="/css/landing-page-dark.css";
+        css.href="/css/landing-page-dark.min.css";
         if(md!=null){
             md.className="editormd-preview editormd-preview-theme-dark";
         }
