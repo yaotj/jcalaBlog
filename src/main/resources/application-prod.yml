@@ -48,6 +48,7 @@ spring:
       schema: classpath:import.sql
       data: classpath:data.sql
       initialize: true
+      sql-script-encoding: UTF-8
       initialSize: 5
       minIdle: 5
       maxActive: 20

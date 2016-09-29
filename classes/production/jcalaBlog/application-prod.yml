@@ -40,7 +40,7 @@ spring:
       ehcache:
         config: ehcache.xml
     datasource:
-      type: com.zaxxer.hikari.HikariDataSource
+      type: com.alibaba.druid.pool.DruidDataSource
       username: root
       password: root
       url: jdbc:mysql://127.0.0.1:3306/jcala_blog?useUnicode:true&amp;characterEncoding:UTF-8
@@ -48,10 +48,13 @@ spring:
       schema: classpath:import.sql
       data: classpath:data.sql
       initialize: true
-      hikari:
-        connection-timeout: 30000
-        maximum-pool-size: 50
-        minimum-idle: 5
+      sql-script-encoding: UTF-8
+      initialSize: 5
+      minIdle: 5
+      maxActive: 20
+      maxWait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
 mybatis:
     type-aliases-package: me.jcala.blog.domain,me.jcala.blog.mapping
     type-handlers-package: org.apache.ibatis.type.LocalDateTypeHandler
