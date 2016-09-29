@@ -11,12 +11,12 @@ server:
         buffer-size: 16384
         accesslog:
             enabled: true
-            dir: arget/logs
+            dir: /home/jcala/blog/log/server_log
             pattern: combined
 #打印日志配置
 logging:
     config: classpath:logback-spring.xml
-    path: /Users/jcala/logs
+    path: /home/jcala/blog/log/spring_log
 #velocity模板引擎的配置
 spring:
     velocity:
@@ -44,7 +44,7 @@ spring:
       driverClassName: com.mysql.jdbc.Driver
       schema: classpath:import.sql
       data: classpath:data.sql
-      initialize: false
+      initialize: true
       hikari:
         connection-timeout: 30000
         maximum-pool-size: 50

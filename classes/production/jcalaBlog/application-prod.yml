@@ -11,7 +11,7 @@ server:
         buffer-size: 16384
         accesslog:
             enabled: true
-            dir:/home/jcala/blog/log/server_log
+            dir: /home/jcala/blog/log/server_log
             pattern: combined
 #打印日志配置
 logging:
@@ -44,7 +44,7 @@ spring:
       driverClassName: com.mysql.jdbc.Driver
       schema: classpath:import.sql
       data: classpath:data.sql
-      initialize: false
+      initialize: true
       hikari:
         connection-timeout: 30000
         maximum-pool-size: 50
