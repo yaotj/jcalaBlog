@@ -20,7 +20,7 @@ logging:
 #velocity模板引擎的配置
 spring:
     velocity:
-        cache: false
+        cache: true
         view-names: error,index,projects,tags,tagView,archives,post,about,login,admin/blog_add,admin/project,
                     admin/moniter,admin/blog_modify,admin/blog_list,admin/info,admin/result,admin/resume
         properties:
@@ -38,13 +38,13 @@ spring:
         config: ehcache.xml
     datasource:
       type: com.zaxxer.hikari.HikariDataSource
+      initialize: true
       username: root
       password: root
-      url: jdbc:mysql://127.0.0.1:3306/jcala_blog?useUnicode:true&amp;characterEncoding:UTF-8
+      url: jdbc:mysql://127.0.0.1:3306/anqi?useUnicode:true&amp;characterEncoding:UTF-8
       driverClassName: com.mysql.jdbc.Driver
       schema: classpath:import.sql
       data: classpath:data.sql
-      initialize: true
       hikari:
         connection-timeout: 30000
         maximum-pool-size: 50
