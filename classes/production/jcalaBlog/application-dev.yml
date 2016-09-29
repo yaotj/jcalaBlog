@@ -1,5 +1,5 @@
 server:
-    port: 8080
+    port: 80
     compression:
         min-response-size: 512
         enabled: true
@@ -40,11 +40,11 @@ spring:
       type: com.zaxxer.hikari.HikariDataSource
       username: root
       password: root
-      url: jdbc:mysql://127.0.0.1:3306/jcala_blog?useUnicode:true&amp;characterEncoding:UTF-8
+      url: jdbc:mysql://127.0.0.1:3306/jcala_anqi?useUnicode:true&amp;characterEncoding:UTF-8
       driverClassName: com.mysql.jdbc.Driver
       schema: classpath:import.sql
       data: classpath:data.sql
-      initialize: true
+      initialize: false
       hikari:
         connection-timeout: 30000
         maximum-pool-size: 50

@@ -1,5 +1,5 @@
 server:
-    port: 8080
+    port: 80
     compression:
         min-response-size: 512
         enabled: true
@@ -11,16 +11,16 @@ server:
         buffer-size: 16384
         accesslog:
             enabled: true
-            dir: arget/logs
+            dir: /home/jcala/blog/server_log
             pattern: combined
 #打印日志配置
 logging:
     config: classpath:logback-spring.xml
-    path: /Users/jcala/logs
+    path: /home/jcala/blog/spring_log
 #velocity模板引擎的配置
 spring:
     velocity:
-        cache: true
+        cache: false
         view-names: error,index,projects,tags,tagView,archives,post,about,login,admin/blog_add,admin/project,
                     admin/moniter,admin/blog_modify,admin/blog_list,admin/info,admin/result,admin/resume
         properties:
@@ -38,13 +38,13 @@ spring:
         config: ehcache.xml
     datasource:
       type: com.zaxxer.hikari.HikariDataSource
-      initialize: true
       username: root
       password: root
-      url: jdbc:mysql://127.0.0.1:3306/anqi?useUnicode:true&amp;characterEncoding:UTF-8
+      url: jdbc:mysql://127.0.0.1:3306/jcala_blog?useUnicode:true&amp;characterEncoding:UTF-8
       driverClassName: com.mysql.jdbc.Driver
       schema: classpath:import.sql
       data: classpath:data.sql
+      initialize: false
       hikari:
         connection-timeout: 30000
         maximum-pool-size: 50

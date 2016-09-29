@@ -6,13 +6,15 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE IF NOT EXISTS `anqi`  DEFAULT CHARACTER SET utf8;
+CREATE DATABASE IF NOT EXISTS `jcala_blog`  DEFAULT CHARACTER SET utf8;
 
-USE `anqi`;
+USE `jcala_blog`;
 
 /*Table structure for table `admin` */
-
+DROP TABLE IF EXISTS `view_tag`;
 DROP TABLE IF EXISTS `admin`;
+DROP TABLE IF EXISTS `project`;
+DROP TABLE IF EXISTS `blog_view`;
 
 CREATE TABLE `admin` (
   `username` varchar(50) NOT NULL,
@@ -28,7 +30,6 @@ CREATE TABLE `admin` (
 
 /*Table structure for table `blog_view` */
 
-DROP TABLE IF EXISTS `blog_view`;
 
 CREATE TABLE `blog_view` (
   `vid` int(11) NOT NULL AUTO_INCREMENT,
@@ -42,7 +43,6 @@ CREATE TABLE `blog_view` (
 
 /*Table structure for table `project` */
 
-DROP TABLE IF EXISTS `project`;
 
 CREATE TABLE `project` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -57,7 +57,6 @@ CREATE TABLE `project` (
 
 /*Table structure for table `view_tag` */
 
-DROP TABLE IF EXISTS `view_tag`;
 
 CREATE TABLE `view_tag` (
   `name` varchar(40) NOT NULL,
