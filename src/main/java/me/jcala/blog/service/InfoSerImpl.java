@@ -30,7 +30,6 @@ public class InfoSerImpl implements InfoSer {
     @Override
     @Cacheable(value = "profileOfInfo",key = "1")
     public Info getInfo() {
-        LOGGER.error("执行了getInfo......");
         Info info=new Info();
         try {
             info=infoMapper.select();
@@ -67,7 +66,6 @@ public class InfoSerImpl implements InfoSer {
     @Override
     @CacheEvict(value = "profileOfInfo",key = "1")
     public boolean updateInfo(Info info) {
-        LOGGER.error("执行了update-info,观察getInfo。。。。。。。");
         boolean result=true;
         try {
             infoMapper.update(info);
