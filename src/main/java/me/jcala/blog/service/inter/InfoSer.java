@@ -18,6 +18,6 @@ public interface InfoSer {
     void addSession(HttpServletRequest request, Info info);
     void destroySession(HttpServletRequest request);
     String getResumeMd();
-    boolean saveResume(Info info);
+    boolean updateResume(Info info);
     String getResumeView();
 }

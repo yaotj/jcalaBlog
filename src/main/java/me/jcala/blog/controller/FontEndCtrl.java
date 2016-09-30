@@ -63,7 +63,7 @@ public class FontEndCtrl {
     }
     @GetMapping("/about")
     public String about(Model model, HttpServletResponse response) {
-        response.setCharacterEncoding("UTF-8");
+        model.addAttribute("info",infoSer.getInfo());
         model.addAttribute("resume",infoSer.getResumeView());
         return "about";
     }

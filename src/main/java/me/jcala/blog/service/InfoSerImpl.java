@@ -30,6 +30,7 @@ public class InfoSerImpl implements InfoSer {
     @Override
     @Cacheable(value = "profileOfInfo",key = "1")
     public Info getInfo() {
+        LOGGER.error("执行了getInfo......");
         Info info=new Info();
         try {
             info=infoMapper.select();
@@ -66,6 +67,7 @@ public class InfoSerImpl implements InfoSer {
     @Override
     @CacheEvict(value = "profileOfInfo",key = "1")
     public boolean updateInfo(Info info) {
+        LOGGER.error("执行了update-info,观察getInfo。。。。。。。");
         boolean result=true;
         try {
             infoMapper.update(info);
@@ -79,19 +81,19 @@ public class InfoSerImpl implements InfoSer {
     @Override
     @Transactional(isolation = Isolation.READ_COMMITTED)
     public int modifyPw(String oldPass,String newPass) {
-        int resdult;
+        int result;
        if (checkPass(oldPass)){
            try {
                infoMapper.updataPass(newPass);
-               resdult=MODIFYPASSSUC;
+               result=MODIFYPASSSUC;
            } catch (Exception e) {
                LOGGER.error(e.getMessage());
-               resdult=SySTEMERROE;
+               result=SySTEMERROE;
            }
        }else {
-          resdult=PASSERROE;
+           result=PASSERROE;
        }
-        return resdult;
+        return result;
     }
     @Override
     public void addSession(HttpServletRequest request,Info info){
@@ -115,8 +117,8 @@ public class InfoSerImpl implements InfoSer {
         return md;
     }
     @Override
-    @CacheEvict(value = "resumeView")
-    public boolean saveResume(Info info){
+    @CacheEvict(value = "resumeView",key = "1")
+    public boolean updateResume(Info info){
         boolean result=true;
         try {
             infoMapper.updateResume(info);

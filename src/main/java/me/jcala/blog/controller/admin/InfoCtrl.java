@@ -57,8 +57,7 @@ public class InfoCtrl {
 
     @PostMapping("/admin/resume.action")
     public String resumeUpdate(Info info, Model model) {
-        System.out.println(info);
-        infoSer.saveResume(info);
+        infoSer.updateResume(info);
         return "redirect:/admin/resume";
     }
 }
