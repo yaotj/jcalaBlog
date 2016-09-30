@@ -39,7 +39,7 @@ spring:
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
         username: root
-        password: root
+        password: 10573962Zj*
         url: jdbc:mysql://127.0.0.1:3306/jcala_blog?useUnicode:true&amp;characterEncoding:UTF-8
         driverClassName: com.mysql.jdbc.Driver
         schema: classpath:import.sql

@@ -39,12 +39,12 @@ spring:
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
         username: root
-        password: 10573962Zj*
+        password: root
         url: jdbc:mysql://127.0.0.1:3306/jcala_blog?useUnicode:true&amp;characterEncoding:UTF-8
         driverClassName: com.mysql.jdbc.Driver
         schema: classpath:import.sql
         data: classpath:data.sql
-        initialize: true
+        initialize: false
         sql-script-encoding: UTF-8
         hikari:
             connection-timeout: 30000
