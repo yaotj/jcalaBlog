@@ -14,18 +14,6 @@ import java.lang.management.ManagementFactory;
 @Service
 public class MoniterSerImpl implements MoniterSer {
     private static final Logger LOGGER = LoggerFactory.getLogger(MoniterSerImpl.class);
-   // @Autowired
-   // private VisiterMapper visiterMapper;
-   /* @Override
-    public List<Visiter> getVisiters() {
-        List<Visiter> visiters=new ArrayList<>();
-        try {
-            visiters=visiterMapper.select();
-        } catch (Exception e) {
-            LOGGER.error(e.getMessage());
-        }
-        return visiters;
-    }*/
     @Override
    public int getFreeMemery(){
            OperatingSystemMXBean osmxb = ManagementFactory.getPlatformMXBean(OperatingSystemMXBean.class);
