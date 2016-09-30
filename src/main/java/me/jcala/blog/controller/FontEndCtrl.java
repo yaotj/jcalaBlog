@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @Controller
@@ -61,7 +62,8 @@ public class FontEndCtrl {
         return "tagView";
     }
     @GetMapping("/about")
-    public String about(Model model) {
+    public String about(Model model, HttpServletResponse response) {
+        response.setCharacterEncoding("UTF-8");
         model.addAttribute("resume",infoSer.getResumeView());
         return "about";
     }
