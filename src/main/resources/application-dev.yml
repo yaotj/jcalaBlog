@@ -1,5 +1,5 @@
 server:
-    port: 80
+    port: 8080
     compression:
         min-response-size: 512
         enabled: true
@@ -36,23 +36,23 @@ spring:
           max-file-size: 3MB
           max-request-size: 10MB
     cache:
-      cache-names: ehcache
-      ehcache:
-        config: ehcache.xml
+        cache-names: ehcache
+        ehcache:
+            config: ehcache.xml
     datasource:
-      type: com.zaxxer.hikari.HikariDataSource
-      username: root
-      password: root
-      url: jdbc:mysql://127.0.0.1:3306/jcala_blog?useUnicode:true&amp;characterEncoding:UTF-8
-      driverClassName: com.mysql.jdbc.Driver
-      schema: classpath:import.sql
-      data: classpath:data.sql
-      initialize: true
-      sql-script-encoding: UTF-8
-      hikari:
-        connection-timeout: 30000
-        maximum-pool-size: 50
-        minimum-idle: 5
+        type: com.zaxxer.hikari.HikariDataSource
+        username: root
+        password: 10573962Zj*
+        url: jdbc:mysql://127.0.0.1:3306/jcala_blog?useUnicode:true&amp;characterEncoding:UTF-8
+        driverClassName: com.mysql.jdbc.Driver
+        schema: classpath:import.sql
+        data: classpath:data.sql
+        initialize: true
+        sql-script-encoding: UTF-8
+        hikari:
+            connection-timeout: 30000
+            maximum-pool-size: 50
+            minimum-idle: 5
 mybatis:
     type-aliases-package: me.jcala.blog.domain,me.jcala.blog.mapping
     type-handlers-package: org.apache.ibatis.type.LocalDateTypeHandler

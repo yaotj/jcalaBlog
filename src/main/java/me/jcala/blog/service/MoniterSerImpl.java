@@ -19,7 +19,9 @@ public class MoniterSerImpl implements MoniterSer {
            OperatingSystemMXBean osmxb = ManagementFactory.getPlatformMXBean(OperatingSystemMXBean.class);
            long totalvirtualMemory = osmxb.getTotalSwapSpaceSize(); // 剩余的物理内存
            long freePhysicalMemorySize = osmxb.getFreePhysicalMemorySize();
-           Double compare = (Double) (freePhysicalMemorySize * 1.0 / totalvirtualMemory) * 100;
+           Double compare = (freePhysicalMemorySize * 1.0 / totalvirtualMemory) * 100;
+           System.out.print("total memory:"+totalvirtualMemory);
+           System.out.print("free memory:"+freePhysicalMemorySize);
            return compare.intValue();
    }
 }

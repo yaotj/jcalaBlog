@@ -94,7 +94,6 @@ public class FontEndCtrl {
 
     @PostMapping("/login.action")
     public String doLogin(Info user, HttpServletRequest request) {
-        System.out.println(user);
         boolean result = infoSer.login(user);
         if (result) {
             infoSer.addSession(request, user);
