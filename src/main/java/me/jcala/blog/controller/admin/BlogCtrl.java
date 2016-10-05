@@ -1,6 +1,5 @@
 package me.jcala.blog.controller.admin;
 
-import io.undertow.conduits.GzipStreamSinkConduit;
 import me.jcala.blog.domain.BlogView;
 import me.jcala.blog.service.inter.BlogSer;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -62,13 +61,12 @@ public class BlogCtrl {
     public String postAction(BlogView view,Model model){
         boolean result=blogSer.addBlog(view);
         if (result){
-            model.addAttribute("targetUrl","/admin/blogList/1");
+            return "redirect:/admin/blogList/1";
         }else {
             model.addAttribute("targetUrl","/admin/blog_add");
             model.addAttribute("result",0);
+            return "admin/result";
         }
-        return "admin/result";
-
     }
 
     /**

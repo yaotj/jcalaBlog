@@ -11,11 +11,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.servlet.http.HttpServletRequest;
 
+
 /**
- * Created by Administrator on 2016/9/8.
+ * 后台管理中项目管理页面
+ * 包括对博客的增,删,改
+ * 此页面中所有处理请求的前缀为/admin，比如info方法匹配的url为/admin/info
  */
 @Controller
 public class InfoCtrl {
+
     @Autowired
     private InfoSer infoSer;
 
@@ -54,7 +58,6 @@ public class InfoCtrl {
         model.addAttribute("md", infoSer.getResumeMd());
         return "admin/resume";
     }
-
     @PostMapping("/admin/resume.action")
     public String resumeUpdate(Info info, Model model) {
         infoSer.updateResume(info);
