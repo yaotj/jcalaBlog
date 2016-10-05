@@ -78,7 +78,7 @@ public class BlogSerImpl implements BlogSer {
         return blogList;
     }
     @Override
-    public int getPageNum(){
+    public int adminGetPageNum(){
         int num=0;
         try {
             num=blogMapper.selectBlogNum();

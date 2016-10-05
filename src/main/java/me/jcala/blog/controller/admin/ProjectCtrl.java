@@ -27,7 +27,7 @@ public class ProjectCtrl {
      }
     @PostMapping("/addPro.action")
     public String addProject(Project project){
-        projectSer.savePro(project);
+        projectSer.addPro(project);
         return "redirect:/admin/project/1";
     }
     @GetMapping("/deletePro/{id}")

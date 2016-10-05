@@ -45,7 +45,7 @@ public class ProjectSerImpl implements ProjectSer {
             @CacheEvict(value = "projectPageNum",key = "1")
     })
     @Transactional(isolation = Isolation.READ_COMMITTED)
-    public void savePro(Project project) {
+    public void addPro(Project project) {
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         project.setDate(timestamp);
         try {

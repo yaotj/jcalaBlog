@@ -114,7 +114,7 @@ public class BlogCtrl {
     @GetMapping("/blogList/{page}")
     public String blogList(@PathVariable int page, Model model) {
         model.addAttribute("current",page);
-        model.addAttribute("pageNum",blogSer.getPageNum());
+        model.addAttribute("pageNum",blogSer.adminGetPageNum());
         model.addAttribute("blogList",blogSer.getBlogPage(page));
         return "admin/blog_list";
     }
