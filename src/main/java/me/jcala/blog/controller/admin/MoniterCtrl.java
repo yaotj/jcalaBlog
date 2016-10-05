@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * Created by Administrator on 2016/9/13.
+ * 后台管理中监控页面
+ * 目前只包括内存占用的监控
  */
 @Controller
 public class MoniterCtrl {
@@ -17,9 +18,6 @@ public class MoniterCtrl {
     private MoniterSer moniterSer;
     @GetMapping("/admin")
     public String moniter(Model model, HttpServletRequest request) throws Exception {
-/*        List<Visiter> visiters=moniterSer.getVisiters();
-        Collections.reverse(visiters);
-        model.addAttribute("VsiterList",visiters);*/
         model.addAttribute("freeMemory",moniterSer.getFreeMemery());
         return "admin/moniter";
     }

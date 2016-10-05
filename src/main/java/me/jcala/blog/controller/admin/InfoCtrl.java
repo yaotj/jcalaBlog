@@ -13,8 +13,9 @@ import javax.servlet.http.HttpServletRequest;
 
 
 /**
- * 后台管理中项目管理页面
- * 包括对博客的增,删,改
+ * 后台管理中个人信息管理页面
+ * 包括对修改密码，更改用户名，邮箱，twitter，github地址以及简历
+ * 更改用户名，邮箱，twitter，github地址后，前端显示也会随之改变
  * 此页面中所有处理请求的前缀为/admin，比如info方法匹配的url为/admin/info
  */
 @Controller

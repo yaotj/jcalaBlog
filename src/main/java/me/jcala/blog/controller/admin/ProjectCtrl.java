@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * Created by Administrator on 2016/9/16.
+ * 后台管理中监控页面
+ * 目前只包括内存占用的监控
  */
 @Controller
 @RequestMapping("/admin")

@@ -16,6 +16,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
+/**
+ * 前端页面显示的控制器
+ * 共包括archives,login,projects,tags,about,post,login这几个页面
+ */
 @Controller
 public class FontEndCtrl {
     @Autowired
