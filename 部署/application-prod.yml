@@ -10,10 +10,12 @@ server:
         buffer-size: 16384
         accesslog:
             enabled: true
+            #undertow日志地址
             dir: /home/jcala/blog/log/server_log
             pattern: combined
 logging:
     config: classpath:logback-spring.xml
+    #spring日志地址
     path: /home/jcala/blog/log/spring_log
 spring:
     velocity:
@@ -38,12 +40,16 @@ spring:
             config: ehcache.xml
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
+        #数据库用户名
         username: root
+        #数据库密码
         password: root
+        #jdbc url
         url: jdbc:mysql://127.0.0.1:3306/jcala_blog?useUnicode:true&amp;characterEncoding:UTF-8
         driverClassName: com.mysql.jdbc.Driver
         schema: classpath:import.sql
         data: classpath:data.sql
+        #是否导入数据库表结构以及demo数据
         initialize: false
         sql-script-encoding: UTF-8
         hikari:
