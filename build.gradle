@@ -74,6 +74,4 @@ dependencies {
   compile 'org.projectlombok:lombok:1.16.10'
   //---------------------缓存-------------------------------
   compile "net.sf.ehcache:ehcache:${ehcacheVersion}"
-  //------------------linux监控-----------------------------
-  //compile 'org.fusesource:sigar:1.6.4'
 }
